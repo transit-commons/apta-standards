@@ -27,65 +27,62 @@ Remember: This is a collaborative brainstorming phase. All input is valuable, ev
 
 ## Document Outline
 
-### 1. Executive Summary
+- Executive Summary
+    - Overview of [standard/topic]
+    - Why this matters to transit agencies
+    - Key stakeholders and ownership recommendations
+        - Champion department
+            - Why this department
+            - Core responsibilities
+            - Key capabilities
+        - Department Roles
+            - Compliance
+            - Customer Service
+            - Operations/Planning
+            - Asset Management
+            - Finance/Administration
 
-- Overview of [standard/topic]
-- Why this matters to transit agencies
-- Key stakeholders and ownership recommendations
+- Current State of Practice
+    - Existing implementations
+    - Common challenges
+    - Success stories
+    - Tools and resources
 
-### 2. Current State of Practice
+- Implementation Guide
+    - Planning & Prerequisites
+        - Agency readiness assessment
+        - Resource requirements
+        - Stakeholder engagement
+    - Technical Implementation
+        - Step-by-step process
+        - System requirements
+        - Integration points
+        - Data mapping
+    - Quality Assurance
+        - Validation methods
+        - Common issues and solutions
+        - Testing procedures
+    - Operations & Maintenance
+        - Ongoing processes
+        - Update procedures
+        - Monitoring and alerts
 
-- Existing implementations
-- Common challenges
-- Success stories
-- Tools and resources
+- Case Studies
+    - Small agency example
+    - Large agency example
+    - Regional implementation
 
-### 3. Implementation Guide
+- Additional Resources
+    - Related standards
+    - Tools and software
+    - Community resources
+    - Training materials
 
-#### 3.1 Planning & Prerequisites
-
-- Agency readiness assessment
-- Resource requirements
-- Stakeholder engagement
-
-#### 3.2 Technical Implementation
-
-- Step-by-step process
-- System requirements
-- Integration points
-- Data mapping
-
-#### 3.3 Quality Assurance
-
-- Validation methods
-- Common issues and solutions
-- Testing procedures
-
-#### 3.4 Operations & Maintenance
-
-- Ongoing processes
-- Update procedures
-- Monitoring and alerts
-
-### 4. Case Studies
-
-- Small agency example
-- Large agency example
-- Regional implementation
-
-### 5. Additional Resources
-
-- Related standards
-- Tools and software
-- Community resources
-- Training materials
-
-### 6. Appendices
-
-- Glossary
-- Reference implementations
-- Sample configurations
-- Validation rules
+- Appendices
+    - Glossary
+    - Reference implementations
+    - Sample configurations
+    - Validation rules
 
 ---
 
