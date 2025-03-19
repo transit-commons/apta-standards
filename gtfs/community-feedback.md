@@ -1,30 +1,44 @@
-# **APTA Transit Data Standards \- GTFS Schedule Implementation Guide**
+# **APTA Transit Data Standards - GTFS Schedule Implementation Guide**
 
 **Initial Comment Period Closes:** February 18, 2025
 
-The goal for this document is to collect input and feedback for a paper to be published through APTA’s standards process that provides a comprehensive overview of the state of best practices for working with GTFS Schedule data at an agency. The intended audience could range from someone working at a small agency with little support or existing practice to someone starting a new role at a large agency with lots of poorly documented existing practice to a veteran GTFS maintainer who wants to make sure they’re up to date on the latest tips and tricks. The executive summary will serve as an asset for that person to take to their leadership, or an entrypoint for an executive to know who to pass the rest of the document to.
+The goal for this document is to collect input and feedback for a paper to be published through APTA's standards process that provides a comprehensive overview of the state of best practices for working with GTFS Schedule data at an agency. The intended audience could range from someone working at a small agency with little support or existing practice to someone starting a new role at a large agency with lots of poorly documented existing practice to a veteran GTFS maintainer who wants to make sure they're up to date on the latest tips and tricks. The executive summary will serve as an asset for that person to take to their leadership, or an entrypoint for an executive to know who to pass the rest of the document to.
 
-Where existing resources that we expect to stay online long-term exist, we want to reference those instead of duplicating them. After publishing the eventual document through APTA’s standards process, a living version on GitHub will accept contributions on an ongoing basis and we will periodically publish new editions through APTA.
+> **Laurie Merrell**: Is audience just agencies who don't yet publish GTFS? If not may want to also talk about "what it takes to implement and then maintain high quality GTFS"
+>
+> > **Chris Alfano**: The audience would be any practitioners who work with GTFS, so someone starting a new role at a big agency that already publishes GTFS would be a primary audience too
+> >
+> > **Cassie Schmitt**: I think this will also be valuable to staff already doing the work - but need guidance to improve how they are doing the work, etc.
 
-**Please add your thoughts/notes directly into this document; we appreciate your contributions\!**
+Where existing resources that we expect to stay online long-term exist, we want to reference those instead of duplicating them. After publishing the eventual document through APTA's standards process, a living version on GitHub will accept contributions on an ongoing basis and we will periodically publish new editions through APTA.
+
+> **Elizabeth Sall**: There are a lot of these sections that could be fulfilled by just pointing to other resources. I'd strongly suggest doing so in order to minimize the # of things the community needs to keep up to date.
+>
+> > **Chris Alfano**: Agreed, that's our M.O., but we do want to tie things together and narrate enough so that new practitioners aren't drowning in not knowing where to start or what to trust or what to take away from where. I think we also want to consider the stability of sources and e.g. paraphrase the key takeaways from any source that doesn't have a firm commitment behind it to still be around on the order of 3-5 years
+> >
+> > **Chris Alfano**: I'm picturing a "guided tour" tone
+> >
+> > **Chris Alfano**: Also—the theory of change here is that by curating this all together and then publishing it through APTA's standards process, we can put APTA's letterhead to good use giving changemakers within agencies an asset to take to less tech-savvy leadership
+
+**Please add your thoughts/notes directly into this document; we appreciate your contributions!**
 
 ---
 
 ## **Contributing Guidelines**
 
-Welcome to our community brainstorming document\! We encourage contributions from everyone interested in transit data standards, regardless of your level of experience. Here's how you can help:
+Welcome to our community brainstorming document! We encourage contributions from everyone interested in transit data standards, regardless of your level of experience. Here's how you can help:
 
-* **Add your thoughts anywhere**: Drop in ideas, links, bullet points, or partial thoughts under any section  
-* **Don't worry about polish**: Rough ideas and quick notes are valuable  
-* **Share real examples**: Link to relevant projects, tools, or implementations you know about  
-* **Ask questions**: Note areas that need clarification or further exploration  
+* **Add your thoughts anywhere**: Drop in ideas, links, bullet points, or partial thoughts under any section
+* **Don't worry about polish**: Rough ideas and quick notes are valuable
+* **Share real examples**: Link to relevant projects, tools, or implementations you know about
+* **Ask questions**: Note areas that need clarification or further exploration
 * **Suggest scenarios**: Add real-world use cases that should be considered
 
 Ways to contribute:
 
-1. **Comment or suggest**: Access must be requested to view or contribute to this document. Feel free to invite any colleagues.  
-2. **Direct editing**: Request edit access through Google Doc's "Request access" feature if you'd like to add content directly  
-3. Use comments to discuss ideas with others  
+1. **Comment or suggest**: Access must be requested to view or contribute to this document. Feel free to invite any colleagues.
+2. **Direct editing**: Request edit access through Google Doc's "Request access" feature if you'd like to add content directly
+3. Use comments to discuss ideas with others
 4. Feel free to expand the outline with new sections or propose a better sequence
 
 Remember: This is a collaborative brainstorming phase. All input is valuable, even if it's just a quick thought or partial idea.
@@ -33,9 +47,9 @@ Remember: This is a collaborative brainstorming phase. All input is valuable, ev
 
 ## **Original Proposals**
 
-* [Document: GTFS Best Practices \#1](https://github.com/transit-data-collab/documents/issues/1)  
-  * Original outline proposed by John Levin  
-  * Feedback from Lina  
+* [Document: GTFS Best Practices #1](https://github.com/transit-data-collab/documents/issues/1)
+  * Original outline proposed by John Levin
+  * Feedback from Lina
 * SWG monthly discussion on structure of documents and executive summary featuring department responsibilities/stakes
 
 ---
@@ -44,33 +58,33 @@ Remember: This is a collaborative brainstorming phase. All input is valuable, ev
 
 * Executive Summary
 
-  * Overview  
-    * What is GTFS Schedule  
-      * vs other GTFS standards  
-    * Why does GTFS Schedule matter  
+  * Overview
+    * What is GTFS Schedule
+      * vs other GTFS standards
+    * Why does GTFS Schedule matter
     * What it takes to implement GTFS Schedule
 
   * Key stakeholders and ownership recommendations
 
-    * Champion/Owner:  
-      * Operations/Planning Department?  
-        * Primary user of schedule/service data  
-        * Direct connection to service delivery  
-        * Natural bridge between IT and service planning  
+    * Champion/Owner:
+      * Operations/Planning Department?
+        * Primary user of schedule/service data
+        * Direct connection to service delivery
+        * Natural bridge between IT and service planning
       * Customer Service?
 
-    * Department Responsibilities and Stakes  
-      * Operations / Planning  
-        * Responsible for maintaining schedules and exporting from scheduling systems  
-      * Customer Service  
-        * Public-facing schedule information  
-        * Responsible for ensuring quality of end-user experience consuming GTFS data  
-      * Asset Management  
-        * Stop/station infrastructure  
-        * Accessibility information (stops & vehicles)  
-      * Finance/Admin  
-        * Procurement and vendor management  
-      * Compliance  
+    * Department Responsibilities and Stakes
+      * Operations / Planning
+        * Responsible for maintaining schedules and exporting from scheduling systems
+      * Customer Service
+        * Public-facing schedule information
+        * Responsible for ensuring quality of end-user experience consuming GTFS data
+      * Asset Management
+        * Stop/station infrastructure
+        * Accessibility information (stops & vehicles)
+      * Finance/Admin
+        * Procurement and vendor management
+      * Compliance
         * NTD reporting requirements
 
 * Sections
@@ -83,95 +97,164 @@ Remember: This is a collaborative brainstorming phase. All input is valuable, ev
 
       * Policymakers/analysts on their behalf
 
-      * Researchers  
+      * Researchers
     * Both proprietary and open-source
 
-  * Procurement language  
+  * Procurement language
     * What to ask for in procurement and why
 
-  * Data Governance needs  
-    * What aspects of data governance are important  
-    * Identified data owner and data stewards for schedule data (business roles \- not IT roles)  
-    * GTFS Data ownership/curation best practices for various governmental structures  
-      * Small agencies who can’t maintain themselves but exist in a regional context  
-      * Small agencies in rural areas  
-      * Large agencies  
-      * Agencies that manage or host on behalf of others (ex: one agency in a region posts feeds for multiple agencies)  
-      * etc.  
-    * Definition of high-quality data  
-      * Data that is fit for purpose  
-      * Highlight the key most common data quality dimensions relevant to GTFS  
-    * Data quality monitoring  
-      * Use of Data Quality Management Plans (or similar)  
-      * Automated monitoring \- who does it, what standards do they follow, how to align to internal data quality practices  
-      * Corrective processes for resolving issues in current dataset  
-      * Preventative processes for resolving issues upstream (to prevent future issues from happening) \- includes communication with data stewards/owners \- potential root cause analysis & process change (internally or with partners/vendors)  
-    * Data quality requirements / policies / mechanisms  
-      * In vendor contracts  
-      * In grants  
-      * Incentives  
+> **Chris Alfano**: Procurement language for scheduling systems should cite the official MobilityData GTFS validator and require some specific minimum level of validity
+>
+> > **Elizabeth Sall**: Just refer to procurement language in MDIP. If something not contained in MDIP procurement guidelines...can always add.
+> >
+> > **Jessica Roberts**: One note: some vendors cannot include accessibility data in GTFS feeds, even if the agency has this. Agencies should include this criterion in the selection process and require it - it's an important equity & ADA issue.
+> >
+> > **Tzu-Jen Chan**: I'm not a procurement expert, but perhaps the GTFS Schedule Features (https://gtfs.org/getting-started/features/overview/#gtfs-schedule-features) could be helpful for procurement language. These features explain the purpose of each feature as well as the files and fields associated with them. For example: "The GTFS data submitted by vendors must include the Accessibility, x, and y... features as defined in the GTFS Schedule Features."
+
+> **Jessica Roberts**: Vyki Englert at Compiler is working on a procurement deep dive as part of the California Transit Association IT Committee - you should talk with her
+>
+> > **Chris Alfano**: invited @vyki@compiler.la @scott@compiler.la
+
+  * Data Governance needs
+    * What aspects of data governance are important
+    * Identified data owner and data stewards for schedule data (business roles - not IT roles)
+    * GTFS Data ownership/curation best practices for various governmental structures
+      * Small agencies who can't maintain themselves but exist in a regional context
+      * Small agencies in rural areas
+      * Large agencies
+      * Agencies that manage or host on behalf of others (ex: one agency in a region posts feeds for multiple agencies)
+      * etc.
+
+> **Cassie Schmitt**: I want to think about addressing best practices for this audience. - ie standardizing use of tools and processes, having clear requirements from the "host" agency, clarity on what a host provides & what it requires of agencies submitting, etc.
+>
+> **Cassie Schmitt**: We have an example of this at Sound Transit for the commuter rail GTFS.
+
+    * Definition of high-quality data
+      * Data that is fit for purpose
+      * Highlight the key most common data quality dimensions relevant to GTFS
+
+> **Tzu-Jen Chan**: Some resources on gtfs.org about defining high-quality GTFS data: https://gtfs.org/getting-started/validate/
+>
+> **Joseph Mann**: When you upload a gtfs-static file, validation report is generated by Open-Source GTFS Schedule Validator (MobilityData) with additional Google rules.
+
+    * Data quality monitoring
+      * Use of Data Quality Management Plans (or similar)
+      * Automated monitoring - who does it, what standards do they follow, how to align to internal data quality practices
+      * Corrective processes for resolving issues in current dataset
+      * Preventative processes for resolving issues upstream (to prevent future issues from happening) - includes communication with data stewards/owners - potential root cause analysis & process change (internally or with partners/vendors)
+
+> **Cassie Schmitt**: Issues at ST where staff get stuck in just correcting the same mistakes every time - instead of working with the business to resolve process issues upstream.
+
+    * Data quality requirements / policies / mechanisms
+      * In vendor contracts
+      * In grants
+      * Incentives
       * DQ steps built in production/maintenance processes
 
-  * Data management needs/ challenges  
-    * What are the the issues with the data  
-    * What is the processing that is needed, etc.  
-    * Historical archiving  
-    * Manual cleaning of GTFS data published by vendor systems  
+  * Data management needs/ challenges
+    * What are the the issues with the data
+    * What is the processing that is needed, etc.
+    * Historical archiving
+
+> **Chris Alfano**: MobilityDatabase captures historical snapshots of public GTFS, but you may also want to have historical schedule data captured in a data warehouse in a usable form so historical analysis projects can easily reference schedule data as it was at any point in time
+
+    * Manual cleaning of GTFS data published by vendor systems
     * Managing modified schedules (ex: holidays, events, closures/changes for maintenance, openings, etc.)
 
-  * Staffing / roles and/or consulting support  
-    * What is needed to do this work  
-    * Communication between stakeholders  
+> **Jessica Roberts**: Is this where you want to highlight the main problems with published static data feeds? Holiday schedules are a major pain point - many agencies do a poor job of ensuring that correct holiday schedules are reflected in GTFS & published in time. Talk w/ Evan Siroky at Cal-ITP for more on this and take a look at his report here https://www.calitp.org/assets/Cal-ITP-2023-Holiday-Service-Transit-Traveler-Information-Research.pdf
+
+> **Jessica Roberts**: My colleagues on Transit app's data team could tell you the most common static data problems easily (they live & breathe this). Would you like me to ask them for a summary?
+>
+> > **Chris Alfano**: yes please!
+> >
+> > **Jessica Roberts**: I've asked
+> >
+> > **Jessica Roberts**: Update - handing this off to my colleague Stephen Miller, he can accurately represent our data team's input, and our policy recommendations
+
+  * Staffing / roles and/or consulting support
+    * What is needed to do this work
+    * Communication between stakeholders
   * Sample project plans and steps
 
-  * Use Cases  
-    * Publishing GTFS Feed  
-      * Importance of publishing to public URL endpoint  
-    * Role of GTFS static in publishing GTFS-rt  
-      * Importance of making sure TripIDs match between static & RT  
-      * Often there are different vendors, internal product owners, and review/update timelines between GTFS static & rt \- these *must* be synced up  
-    * Submitting to NTD  
+> **Laurie Merrell**: Maybe example project plans for:
+> * Small agency implementing GTFS for the first time
+> * Any agency changing vendors for key parts of the stack -- how to maintain GTFS consistency/quality through migrations?
+> * GTFS quality improvement initiative? Maybe especially re: preparing GTFS schedule for RT readiness?
+>
+> > **brad.henn@hatch.com**: One idea we are seeing surfacing is that a state level agency, say a DOT, would either hire someone(s) to perform these types of roles; separately, we as a business member are looking at ways we can possibly add this into our service offering.
+> >
+> > **Jessica Roberts**: Yes, Brad, I was thinking about the important role state DOTs can play in raising the floor of GTFS data, especially for smaller agencies. They often hire vendors to produce GTFS and create a web clearinghouse of all data feeds. This is enormously useful for agencies and data consumers! e.g. https://oregon-gtfs.com/ and https://data.wsdot.wa.gov/gtfs/list.html. Maybe this is a case study?
+
+  * Use Cases
+    * Publishing GTFS Feed
+      * Importance of publishing to public URL endpoint
+
+> **Elizabeth Sall**: Nome made some documentation on this that should be on gtfs.org
+>
+> > **Chris Alfano**: +nome@garnetconsultingpdx.com is that this: https://gtfs.org/documentation/schedule/reference/#dataset-publishing-general-practices
+> >
+> > **Nome Dickerson**: Yes, that's correct!
+
+    * Role of GTFS static in publishing GTFS-rt
+      * Importance of making sure TripIDs match between static & RT
+      * Often there are different vendors, internal product owners, and review/update timelines between GTFS static & rt - these *must* be synced up
+    * Submitting to NTD
     * Operational Reporting
 
-  * Additional Resources  
-    * Official resources  
-      * [https://gtfs.org/](https://gtfs.org/)  
-      * [https://mobilitydata.org/](https://mobilitydata.org/)	  
-    * Reference implementations  
-      * [https://reports.calitp.org/](https://reports.calitp.org/)  
-    * Training materials  
-    * Community resources  
-      * [https://dot.ca.gov/cal-itp/california-transit-data-guidelines](https://dot.ca.gov/cal-itp/california-transit-data-guidelines)  
-      * [https://mobilitydatabase.org/](https://mobilitydatabase.org/)  
-      * [https://resources.transitapp.com/article/459-gtfs-static](https://resources.transitapp.com/article/459-gtfs-static)   
-      * [Navigating the Transit Data Landscape](https://www.socallinuxexpo.org/sites/default/files/presentations/Navigating%20the%20Transit%20Data%20Landscape.pdf)  
-    * Support channels  
+  * Additional Resources
+    * Official resources
+      * [https://gtfs.org/](https://gtfs.org/)
+      * [https://mobilitydata.org/](https://mobilitydata.org/)
+    * Reference implementations
+      * [https://reports.calitp.org/](https://reports.calitp.org/)
+    * Training materials
+    * Community resources
+      * [https://dot.ca.gov/cal-itp/california-transit-data-guidelines](https://dot.ca.gov/cal-itp/california-transit-data-guidelines)
+      * [https://mobilitydatabase.org/](https://mobilitydatabase.org/)
+      * [https://resources.transitapp.com/article/459-gtfs-static](https://resources.transitapp.com/article/459-gtfs-static)
+      * [Navigating the Transit Data Landscape](https://www.socallinuxexpo.org/sites/default/files/presentations/Navigating%20the%20Transit%20Data%20Landscape.pdf)
+
+> **Jessica Roberts**: Outstanding slide deck from Nina Kin at LA Metro - overview of history, purpose, structure, & common tripping points for GTFS static & rt. Not only should this be shared as a resource but the team putting together this document should review it for some content to pull forward
+>
+> > **Chris Alfano**: invited @kinn@metro.net
+> >
+> > **Nina Kin**: 🙏 I really appreciate your kind words! There's actually more on LA Metro's usage of GTFS that I couldn't fit into the deck, and I was thinking of documenting that separately. Would that be helpful too?
+> >
+> > **Jessica Roberts**: Nina, this deck is my #1 resource I sent to agencies that need to understand GTFS better, and our new staff at Transit - it's just SO GOOD!
+
+    * Support channels
       * MobilityData Slack
+
+> **Elizabeth Sall**: Good to cite specific examples so that people can refer to them when requesting resources
+
+> **Elizabeth Sall**: data infra?
+
+> **Laurie Merrell**: Not sure how deep we want to go on working with consumers, maybe an appendix or something? Re: how to actually get your GTFS to show up in routing & mapping apps
 
 ---
 
 ## **Research Tasks**
 
-- [ ] Survey existing agency implementations  
-- [ ] Document common vendor approaches  
-- [ ] Collect sample procurement language  
-- [ ] Compile cleaning/validation procedures  
-- [ ] Gather example project plans  
-- [ ] Interview agency practitioners  
-- [ ] Review NTD requirements  
+- [ ] Survey existing agency implementations
+- [ ] Document common vendor approaches
+- [ ] Collect sample procurement language
+- [ ] Compile cleaning/validation procedures
+- [ ] Gather example project plans
+- [ ] Interview agency practitioners
+- [ ] Review NTD requirements
 - [ ] Evaluate open source tools
 
 ## **Contributors**
 
-- John Levin \- Metro Transit  
-- Lina Kulikowski \- Broward County Government  
-- Jeff Kessler \- Keolis Commuter Services  
-- Chris Alfano \- Jarvus Innovations  
-- Cassie Schmitt \- Sound Transit \- Data Governance  
--   
+- John Levin - Metro Transit
+- Lina Kulikowski - Broward County Government
+- Jeff Kessler - Keolis Commuter Services
+- Chris Alfano - Jarvus Innovations
+- Cassie Schmitt - Sound Transit - Data Governance
+-
 - \[Name\] \- \[Organization\] \- \[Role/Expertise\]
 
-## 
+##
 
 ## **Jeff’s Brain-Dump**
 
@@ -233,7 +316,7 @@ Countless other files and fields can also be added to enhance the quality and ca
 
 \- Agencies can model connections across routes, stops, and trips, incorporating Block information to provide in-seat transfer opportunities, too.
 
-By nature of being built using comma-separated text files, the GTFS standard also supports custom fields and extensions that can be used to power additional internal resources and provide other relevant information beyond that which is already incorporated in the specification. The active community surrounding GTFS, though, actively encourages development and support of the standard, adopting proposed additions to avoid reinventing the wheel over time. 
+By nature of being built using comma-separated text files, the GTFS standard also supports custom fields and extensions that can be used to power additional internal resources and provide other relevant information beyond that which is already incorporated in the specification. The active community surrounding GTFS, though, actively encourages development and support of the standard, adopting proposed additions to avoid reinventing the wheel over time.
 
 \#\#\# Getting Started with GTFS
 
@@ -251,7 +334,7 @@ After validation, the zipped file containing the relevant GFS files should be po
 
 In addition to posting the link, it is helpful to reach out to large tech platforms that consume this information to ensure your schedule information is added to their databases. Major players include Google Maps (via their transit partner platform), Apple Maps, Transit App, and more.
 
-Some agencies provide a mechanism to notify consumers of when their schedule information is updated; this often takes the form of a mailing list or a subscribeable RSS feed. 
+Some agencies provide a mechanism to notify consumers of when their schedule information is updated; this often takes the form of a mailing list or a subscribeable RSS feed.
 
 \# Best Practices
 
